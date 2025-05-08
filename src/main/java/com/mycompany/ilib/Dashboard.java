@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Antonio
+ * 
  */
 public class Dashboard extends javax.swing.JFrame {
 
