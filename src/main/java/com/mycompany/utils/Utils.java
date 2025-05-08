@@ -28,26 +28,13 @@ public class Utils {
         return formateador.format(ahora);
     }
 
-    // Calcula el número de días entre dos fechas
+   
 public static int calcularDiasDeEstancia(Timestamp startDateTime, Timestamp endDateTime) {
     long diferenciaEnMilisegundos = endDateTime.getTime() - startDateTime.getTime();
     return (int) (diferenciaEnMilisegundos / (1000 * 60 * 60 * 24)); // Convertir milisegundos a días
 }
 
-    // Verifica si una fecha cumple con las horas de check-in/check-out
-    public static boolean verificarHorarioCheckInOut(Date fecha, boolean esCheckIn) {
-        SimpleDateFormat sdf = new SimpleDateFormat("HH");
-        String hora = sdf.format(fecha);
-        int horaInt = Integer.parseInt(hora);
-
-        if (esCheckIn) {
-            return horaInt >= 14;
-        } else {
-            return horaInt <= 12;
-        }
-    }
-
-    // Combina una fecha y una hora en un objeto Date
+    
 public static Date combineDateAndTime(Date date, String time) {
     if (date == null || time == null || time.isEmpty()) {
         throw new IllegalArgumentException("La fecha y la hora no deben ser nulas o vacías.");
